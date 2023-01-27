@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>History</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- java script code-->
+        <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let nav = document.querySelector('#carouselExampleIndicators');
+            nav.addEventListener('wheel', function() {
+                $('.carousel').carousel('nextWhenVisible');
+                pause:"hover";
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <!--navigation bar-->
+        <div>
+            <div class="topnav">
+
+                <div class="dropdown">
+                    <a id="menu"  href="https://ide-f3003970d6a64ca2b9d845b04c1d7477-8080.cs50.ws/index.html">Home</a>
+                </div>
+
+                <div class="dropdown">
+                    <button  id="1" class="button">More</button>
+                    <div class="content">
+                        <a href="https://ide-f3003970d6a64ca2b9d845b04c1d7477-8080.cs50.ws/index2.html">History</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+             <!--img-->
+            <div>
+                <img src="history.png" alt="Egypt">
+            </div>
+
+            <!--middle text-->
+            <div class="middle">
+                <p>Egypt, officially the Arab Republic of Egypt, is one of the greatest, most interesting countries you will ever see. With all of its history,<br>
+                culture, culinary, religion, and versatile geography, Egypt has a special spot for everyone who gets to visit this magnificent place.</p>
+
+                <p>Egyptian history is infinite and is one of the greatest inheritance from human civilization but Egypt is much more than just its thousands<br>
+                of years old Pyramids and monuments, Egypt is life itself and sure is a place that every human who can should once in their lifetime come visit.</p>
+            </div>
+
+            <hr>
+
+            <!-- middle search-->
+            <div class="middle" >
+                <h3>Search for a city in Egypt ?</h3>
+                <form autocomplete="off"  action="https://www.google.com/search"  method="get">
+                <input id="input" name="q" type="search">
+                <input id="submit" type="submit" value="search">
+            </div>
+
+            <hr>
+
+            <!-- swiper div -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- swiper scroll bar -->
+                <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <!-- swiper slides -->
+                <div class="carousel-inner slide">
+
+                    <div id="swiper1" class="carousel-item active">
+                        <div class="slidediv">
+                            <h3>Modern Egypt</h3>
+
+                            <p>Over the past decade, Egypt has become the modern hub of Africa. The country succeeded in getting its own identity<br>
+                            that was made obvious through building several airports, ports and modern marinas, and not to mention the newly built networks<br>
+                            of highways that helped in connecting major cities together.</p>
+
+                            <form >
+                                <a id="explore" href="https:\\www.google.com\q=modern egypt">Explore</a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="swiper2" <div class="carousel-item">
+                        <div class="slidediv">
+                            <h3> Mohamed Ali Egypt</h3>
+
+                            <p>Ottoman-Saudi war in 1811–18 was fought between Egypt under the reign of Muhammad Ali (nominally under Ottoman rule)<br>
+                            and the Wahabbis of Najd who had conquered Hejaz from the Ottomans.</p>
+
+                             <form >
+                                <a id="explore" href="https:\\www.google.com\q=Mohamed Ali Egypt">Explore</a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="swiper3" class="carousel-item">
+                        <div class="slidediv">
+                            <h3> Ancient Egypt</h3>
+
+                            <p>Ancient Egypt was a civilization of ancient Africa, concentrated along the lower reaches of the Nile River, situated in the place that<br>
+                            s now the country Egypt. Ancient Egyptian civilization followed prehistoric Egypt and coalesced around 3100 BC</p>
+
+                             <form >
+                                <a id="explore" href="https:\\www.google.com\q=Ancient egypt">Explore</a>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <!--Embeded Video-->
+            <div>
+                <center>
+                    <iframe class="video" src="https://www.youtube.com/embed/hO1tzmi1V5g?controls=1" title="Egypt History" >
+                    </iframe>
+                </center>
+            </div>
+
+        </div>
+    </body>
+</html>

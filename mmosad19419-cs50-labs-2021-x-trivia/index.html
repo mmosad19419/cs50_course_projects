@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                // part 1 manipulation
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'lightgreen';
+                    document.querySelector("#hint1").innerHTML = "Correct Answer";
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for(let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector("#hint1").innerHTML = "Incorrect Answer";
+                    });
+                }
+
+                // part 2 manipulation
+                document.querySelector("#check").addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if(input.value.toUpperCase() == "EXAM MOOD") {
+                        document.querySelector("#hint").innerHTML = "Correct Answer";
+                        input.style.backgroundColor = "lightgreen";
+                    } else {
+                        document.querySelector("#hint").innerHTML = "Incorrect Answer";
+                        input.style.backgroundColor = "red";
+                       }
+                    });
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    What is the hardest colleague in Egypt?
+                </h3>
+                <!-- answer buttons -->
+                <button class = "correct" type="click">Engineering</button>
+                <button class = "incorrect" type="click">Pharmacy</button>
+                <button class = "incorrect" type="click">any other colleges</button>
+                <p id="hint1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What is the general mood of Engineering students?
+                </h3>
+                <form>
+                    <!-- input box -->
+                    <input type="text" placeholder = "Write your answer">
+                    <!-- check answer button -->
+                    <button id = "check" type="click">Check your answer</button>
+                </form>
+                <p id = "hint"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
