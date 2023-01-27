@@ -1,1 +1,9 @@
-# cs50_course_projects
+### CS50 Course Practice Problem 
+
+- C problems
+- Python 
+- SQL
+- Webdevelopment
+
+Related practice problems
+
